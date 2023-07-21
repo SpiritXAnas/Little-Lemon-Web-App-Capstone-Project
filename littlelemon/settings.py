@@ -4,23 +4,18 @@ Django settings for the Little Web App by Anas Khan
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-s19q&3znn4b-x4j@g4wzj#8dx56+ut5nddkk^fqd9s70-wl74c'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
-# Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -30,8 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework.authtoken', #required for enabling token-based authentication
-    'djoser', #(!)keep after rest_framework.authtoken
+    'rest_framework.authtoken', 
+    'djoser', 
     'restaurant',
 ]
 
@@ -71,15 +66,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'littlelemon.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'LittleLemon',
         'USER': 'django',
-        'PASSWORD': 'password', # insecure, but good enough for this projects :)
+        'PASSWORD': 'password', # keeping it basic 
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
